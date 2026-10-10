@@ -115,7 +115,7 @@ namespace QuanLySinhVien.Views
 
         private void butThem_Click(object sender, EventArgs e)
         {
-            // Clear errors
+            ClearErrorProviders();
             SinhVien sv = new SinhVien();
             sv.MaSV = txtMaSV.Text.Trim();
             sv.NgaySinh = dtpNgaySinh.Value;
@@ -195,7 +195,7 @@ namespace QuanLySinhVien.Views
 
         private void butSua_Click(object sender, EventArgs e)
         {
-            // Clear errors
+            ClearErrorProviders();
             if (string.IsNullOrWhiteSpace(txtMaSV.Text)) return;
 
             SinhVien sv = new SinhVien();
@@ -222,7 +222,7 @@ namespace QuanLySinhVien.Views
 
         private void butXoa_Click(object sender, EventArgs e)
         {
-            // Clear errors
+            ClearErrorProviders();
             if (string.IsNullOrWhiteSpace(txtMaSV.Text)) return;
 
             if (MessageBox.Show("Bạn có muốn xóa sinh viên này không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -246,4 +246,3 @@ namespace QuanLySinhVien.Views
         }
     }
 }
-
